@@ -139,6 +139,12 @@
     <None Include="Resources\Sylvie.vkb">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Sylvie.ckb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sylvie.vkb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -164,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\README.txt" />
+    <Content Include="Sylvie.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Devbot Knowledgebase Editor\Devbot Knowledgebase Editor.vbproj">
