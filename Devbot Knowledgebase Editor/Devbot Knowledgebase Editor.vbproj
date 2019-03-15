@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CC444CA-0A40-4AD2-82BB-884CCAA1289B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Devbot_Knowledgebase_Editor.My.MyApplication</StartupObject>
+    <RootNamespace>Devbot_Knowledgebase_Editor</RootNamespace>
+    <AssemblyName>Devbot Knowledgebase Editor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DocumentationFile>Devbot Knowledgebase Editor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DocumentationFile>Devbot Knowledgebase Editor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Bookmark.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Rule Activation.Designer.vb">
+      <DependentUpon>Rule Activation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rule Activation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SynonymEditor.Designer.vb">
+      <DependentUpon>SynonymEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SynonymEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplacementEditor\OutputReplacements.Designer.vb">
+      <DependentUpon>OutputReplacements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReplacementEditor\OutputReplacements.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplacementEditor\InputReplacements.Designer.vb">
+      <DependentUpon>InputReplacements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReplacementEditor\InputReplacements.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplacementEditor\ReplacementEditor.Designer.vb">
+      <DependentUpon>ReplacementEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReplacementEditor\ReplacementEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input.Designer.vb">
+      <DependentUpon>Input.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Output.Designer.vb">
+      <DependentUpon>Output.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Output.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rule Activation.resx">
+      <DependentUpon>Rule Activation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SynonymEditor.resx">
+      <DependentUpon>SynonymEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplacementEditor\OutputReplacements.resx">
+      <DependentUpon>OutputReplacements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplacementEditor\InputReplacements.resx">
+      <DependentUpon>InputReplacements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplacementEditor\ReplacementEditor.resx">
+      <DependentUpon>ReplacementEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input.resx">
+      <DependentUpon>Input.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Output.resx">
+      <DependentUpon>Output.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Devbot5Library\Devbot5Library.csproj">
+      <Project>{4d25b13b-4d67-433f-9181-bf5fdfa931b6}</Project>
+      <Name>Devbot5Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevbotConsoleApplication\DevbotConsoleApplication.csproj">
+      <Project>{9e99bb2a-e25b-4e6c-9f3c-12ae81068313}</Project>
+      <Name>DevbotConsoleApplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResourceFiles\ResourceFiles.csproj">
+      <Project>{5b823982-5910-45cf-8d9b-f3d1599021bb}</Project>
+      <Name>ResourceFiles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Untitled - 29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Symbol.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application_Blueprint.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application_Design.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackboard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackboard_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocknotes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocknotes_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocknotes_Blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blueprint.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blueprint_Blog.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blueprint_Website.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_FastForward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_First.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Last.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Play_Pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Rec.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Rewind.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Shuffle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Sync.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_3D_Ascending.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_3D_Descending.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Big.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Files.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Files_Wide.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Graph.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Graph_Ascending.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Graph_Descending.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Pie.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Vertical_Bar_Poll.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClapBoard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard_Empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard_Full.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard_Full_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colors.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Bubble.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Reply.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conversation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Denided.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Symbol.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fav.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fav_Empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_AI_Illustrator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_BMP_Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Checked.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Content.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_CSS_Stylesheet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Doc_Text_Word.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_HTML.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_JPG_Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_List.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_MPMusic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PDF_Acrobat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PHP.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PNG_Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PSD_Photoshop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_XLS_Excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_ZIP_Archive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files_Copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Chart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Checked.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Favorites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Sync.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Upload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iMac.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_Light.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MacBook.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MacBookAir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MacBookPro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Compose.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Gmail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Old.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Reply.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Verified.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mails.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rating.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sticky.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Target.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Full.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_3Cols.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Header.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_List.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_ListView.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Results.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Sidebar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_SplitScreen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Splitscreen_3Columns.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_View.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_Config.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_Generic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_Sidebar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wooden_Box.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wooden_Box2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_In.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_Out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="mscoree">
+      <Guid>{5477469E-83B1-11D2-8B49-00A0C9B7C9C4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Untitled - 29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

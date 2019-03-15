@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Documentation de l'API du moteur DevBot</title>
+</head>
+    <body>
+            <h2>Namespace: Conversive.DevBot4</h2>
+            <h3>(Important) Classes:</h3>
+            <br />
+            <a href="#class_reply"> Répondre </a> <br />
+            <a href="#class_state"> État </a> <br />
+            <a href="#class_DevBot4engine"> DevBot4Engine </a> <br />
+            <br />
+            <a name="class_reply"> </a> 
+        <h3>Classe de réponse</h3>
+                <b>Présentation:<br />
+                    L'objet de réponse représente les résultats d'un appel à DevBot4Engine.GetReply. <br />
+                    <b>Propriétés:  <br />
+                        AgentText (string) - Texte à prononcer (utilisé avec MS Agent) <br />
+                        Cmd (string) - Texte de commande pour la sortie <br />
+                        KBItem (KnowledgeBaseItem) - La base de connaissances contenant la règle de correspondance <br />
+                        RuleId (string) - Identifiant de la règle qui a été déclenchée <br />
+                        Texte (chaîne) - Texte de sortie à afficher <br />
+                        <br />
+                    <a3 />
+                        <b>Méthodes:(rien de spécial, juste ceux hérités de Object) <br />
+                            <br /> <br />
+
+
+                            <a name="class_state"> </a> 
+                        <h3>Classe d'état
+                                <b>Présentation: <br />
+                                    Une des deux entrées principales de DevBot4Engine.GetReply. Représente l'état actuel du moteur, notamment: la dernière règle à déclencher, les valeurs des variables en cours et les bases de connaissances actives. <br />
+                                    <b>Propriétés: <br />
+                                        CurrentKBs (ArrayList) - ArrayList des chaînes qui sont les chemins d'accès aux fichiers de la base de connaissances active. <br />
+                                        Lastfired (string) - Identifiant de la dernière règle à déclencher. <br />
+                                        Lastinput (string) - Texte saisi précédemment par l'utilisateur. <br />
+                                        LastRefreshedTime (DateTime) - Dernière fois que l'objet d'état a été actualisé <br />
+                                        Vars (Hashtable) - Hashtable représentant les variables actuelles du moteur. <br />
+                                        <b>Méthodes: <br />
+                                            void LoadVars (string filepath) - Charge un ensemble de variables à partir du fichier donné. <br />
+                                            void SaveVars (string filepath) - Enregistre le fichier State.Vars actuel dans le fichier indiqué. <br />
+                                            <br />
+
+
+                                            <a name="class_DevBot4engine"> </a> <h3>
+                                                Classe DevBot4Engine </ h3>
+                                                <b>Présentation: </ b> <br />
+                                                    Le moteur DevBot de base. Est responsable de trouver des correspondances avec une entrée utilisateur donnée et d'activer la règle appropriée. <br />
+                                                    <b>Propriétés: </ b> <br />
+                                                        (aucun) <br />
+                                                        <b> Méthodes: </ b> <br />
+                                                            CompiledKnowledgeBase AddCompiledKnowledgeBase (string stPath) - Charge une base de connaissances compilée à partir du chemin de fichier indiqué. <br />
+                                                            Reply GetReply (chaîne de caractères, State state): recherche la meilleure correspondance dans la base de connaissances disponible et déclenche la règle correspondante. Le paramètre "input" est le texte d'entrée de l'utilisateur et le paramètre "state" est l'état actuel de l'utilisateur.
+                                                            <br />
+
+                                                            </body>
+                                                            </html>
